@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Auth;
 
 
 
+
 class MoviesController extends Controller
 {
     /**
@@ -80,7 +81,7 @@ class MoviesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int id
+     * @param  int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -92,6 +93,8 @@ class MoviesController extends Controller
         return view('movie.edit',compact('movies','id'));
     }
 
+
+
     /**
      * Update the specified resource in storage.
      *
@@ -101,39 +104,15 @@ class MoviesController extends Controller
      */
     public function update(Request $request, $id)
     {
-/*        return view('movie.index');*/
 
-        /* $M_name=$request->input('name');
-         $M_description=$request->input('description');
-         $M_rating=$request->input('rating');
-         Model::update('update movies set name=?,description =?,rating =? where id =?',
-         [$M_name,$M_description,$M_rating,$id]);
-         return redirect()->route('movie.index')->with('success','Data Updated');
- */
 
-/*
-        $movie=$request->all();
-         $movies=Model::find($movies);
-         $movies->name = $movie['name'];
-         $movies->description=$movie['description'];
-         $movies->rating=$movie['rating'];
-
-         $movies->save();
-
-     return redirect('movie.index');*/
-
-            /*$this->validate($request,[
-                'name'=>'required',
-                'description'=>'required',
-                'rating'=>'rating'
-            ]);
             $movie=Movie::find($id);
+            $movie->id=$request->get('id');
             $movie->name=$request->get('name');
             $movie->description=$request->get('description');
             $movie->rating=$request->get('rating');
             $movie->save();
-            return redirect()->route('movie.index')->with('success','Data Updated');*/
-
+            return redirect()->route('movie.index')->with('success','Data Updated');
 
     }
 
