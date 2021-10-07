@@ -77,14 +77,16 @@ class MoviesController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  string $name
+     * @param  int id
      * @return \Illuminate\Http\Response
      */
-    public function edit($name)
+    public function edit($id)
     {
-        $movie=Movie::find($name);
+        /*$movie=Movie::exists($id);
         echo ($movie->name);
-        return view('movie.edit',compact('movie','name'));
+        return view('movie.edit',compact('movie','id'));*/
+        $movies=Movie::find($id);
+        return view('movie.edit',compact('movies','id'));
     }
 
     /**

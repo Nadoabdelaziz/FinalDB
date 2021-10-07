@@ -19,7 +19,8 @@ Route::get('/', function () {
 
 Route::resource('movie','App\Http\Controllers\MoviesController');
 
-
+//Edit Added
+Route::Get('edit/{id}','App\Http\Controllers\MoviesController@edit');
 
 Auth::routes();
 
