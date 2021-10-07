@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use App\Models\Movie;
+use phpDocumentor\Reflection\DocBlock\Description;
+use PhpParser\Node\Expr\AssignOp\Mod;
 use voku\helper\ASCII;
 use Illuminate\Support\Facades\Hash;
 use App\Http\Controllers\Controller;
@@ -98,17 +101,38 @@ class MoviesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->validate($request,[
-            'name'=>'required',
-            'description'=>'required',
-            'rating'=>'rating'
-        ]);
-        $movie=Movie::find($id);
-        $movie->name=$request->get('name');
-        $movie->description=$request->get('description');
-        $movie->rating=$request->get('rating');
-        $movie->save();
-        return redirect()->route('movie.index')->with('success','Data Updated');
+/*        return view('movie.index');*/
+
+        /* $M_name=$request->input('name');
+         $M_description=$request->input('description');
+         $M_rating=$request->input('rating');
+         Model::update('update movies set name=?,description =?,rating =? where id =?',
+         [$M_name,$M_description,$M_rating,$id]);
+         return redirect()->route('movie.index')->with('success','Data Updated');
+ */
+
+/*
+        $movie=$request->all();
+         $movies=Model::find($movies);
+         $movies->name = $movie['name'];
+         $movies->description=$movie['description'];
+         $movies->rating=$movie['rating'];
+
+         $movies->save();
+
+     return redirect('movie.index');*/
+
+            /*$this->validate($request,[
+                'name'=>'required',
+                'description'=>'required',
+                'rating'=>'rating'
+            ]);
+            $movie=Movie::find($id);
+            $movie->name=$request->get('name');
+            $movie->description=$request->get('description');
+            $movie->rating=$request->get('rating');
+            $movie->save();
+            return redirect()->route('movie.index')->with('success','Data Updated');*/
 
 
     }

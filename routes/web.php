@@ -22,6 +22,10 @@ Route::resource('movie','App\Http\Controllers\MoviesController');
 //Edit Added
 Route::Get('edit/{id}','App\Http\Controllers\MoviesController@edit');
 
+//Update Added
+Route::post('edit/{id}','App\Http\Controllers\MoviesController@update');
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
