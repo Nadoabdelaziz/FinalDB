@@ -124,6 +124,9 @@ class MoviesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $movie=Movie::find($id);
+        $movie->delete();
+        return redirect()->route('movie.index')->with('success','Data Deleted');
+
     }
 }

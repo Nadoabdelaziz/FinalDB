@@ -23,7 +23,7 @@ Route::resource('movie','App\Http\Controllers\MoviesController');
 Route::Get('edit/{id}','App\Http\Controllers\MoviesController@edit');
 
 //Update Added
-Route::post('edit/{id}','App\Http\Controllers\MoviesController@update');
+/*Route::post('edit/{id}','App\Http\Controllers\MoviesController@update');*/
 
 Auth::routes();
 
