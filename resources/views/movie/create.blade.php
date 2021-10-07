@@ -1,11 +1,11 @@
-@extends('movie.master')
+@extends('layouts.master')
 
 
-@section('MovieTitle')
+@section('title')
     Movies Part
 @endsection
 
-@section('MovieContent')
+@section('content')
     <div class="row">
         <div class="col-md-12">
             <br/>
