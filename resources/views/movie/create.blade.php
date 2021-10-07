@@ -29,6 +29,9 @@
             <form method="post" action="{{url('movie')}}">
                 {{csrf_field()}}
                 <div class="form-group">
+                    <input type="text" name="id" class="form-control" placeholder="Enter The Movie ID"/>
+                </div>
+                <div class="form-group">
                     <input type="text" name="name" class="form-control" placeholder="Enter The Movie Name"/>
                 </div>
                 <div class="form-group">
@@ -41,6 +44,7 @@
                     <input type="submit" class="btn btn-primary"/>
                 </div>
             </form>
+
         </div>
     </div>
 @endsection

@@ -66,7 +66,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./map.html">
+                    <a href="./movie/">
                         <i class="now-ui-icons location_map-big"></i>
                         <p>Movies List</p>
                     </a>
