@@ -73,7 +73,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/movie/create">
+                    <a href="./create">
                         <i class="now-ui-icons ui-1_bell-53"></i>
                         <p>Add a new Movie</p>
                     </a>
