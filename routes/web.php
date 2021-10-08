@@ -35,7 +35,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::put('/Admin-Update/{id}','App\Http\Controllers\Admin\DashboardController@AdminRegister');
-
+Route::delete('/User-deleted{id}','App\Http\Controllers\Admin\DashboardController@destroy');
 
 Route::group(['middleware'=> ['auth','admin']],function (){
 
