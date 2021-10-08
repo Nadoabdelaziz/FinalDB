@@ -19,8 +19,10 @@ Route::get('/', function () {
 
 Route::resource('movie','App\Http\Controllers\MoviesController');
 
+
+
 //Edit Added
-Route::Get('edit/{id}','App\Http\Controllers\MoviesController@edit');
+Route::Get('edit{id}','App\Http\Controllers\MoviesController@edit');
 
 //Update Added
 /*Route::post('edit/{id}','App\Http\Controllers\MoviesController@update');*/
@@ -32,6 +34,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::put('/Admin-Update/{id}','App\Http\Controllers\Admin\DashboardController@AdminRegister');
 
 
 Route::group(['middleware'=> ['auth','admin']],function (){
@@ -43,6 +46,11 @@ Route::group(['middleware'=> ['auth','admin']],function (){
         return view('movie.create');
     });
     Route::get('/registered-users','App\Http\Controllers\Admin\DashboardController@registered');
+    Route::get('/Admin-Profile','App\Http\Controllers\Admin\DashboardController@AdminProfile');
+    Route::get('/Admin-edit{id}','App\Http\Controllers\Admin\DashboardController@AdminEdit');
+
+
+
 
 
 

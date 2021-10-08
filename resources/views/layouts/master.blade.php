@@ -79,7 +79,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./user.html">
+                    <a href="./Admin-Profile">
                         <i class="now-ui-icons users_single-02"></i>
                         <p>User Profile</p>
                     </a>
