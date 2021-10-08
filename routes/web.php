@@ -42,6 +42,8 @@ Route::group(['middleware'=> ['auth','admin']],function (){
     Route::get('/create', function () {
         return view('movie.create');
     });
+    Route::get('/registered-users','App\Http\Controllers\Admin\DashboardController@registered');
+
 
 
 });

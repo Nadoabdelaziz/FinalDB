@@ -17,7 +17,7 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::user()->email=='admin@gmail.com'){
+        if(Auth::user()->usertype=='admin'){
 
             return $next($request);
         }

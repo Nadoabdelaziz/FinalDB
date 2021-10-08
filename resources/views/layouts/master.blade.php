@@ -61,7 +61,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="./icons.html">
+                    <a href="./registered-users">
                         <i class="now-ui-icons education_atom"></i>
                         <p>Users</p>
                     </a>

@@ -30,7 +30,7 @@ class LoginController extends Controller
 /*    protected $redirectTo = RouteServiceProvider::HOME;*/
 
     protected function redirectTo(){
-        if(Auth::user()->email=='admin@gmail.com'){
+        if(Auth::user()->usertype=='admin'){
 
             return 'dashboard';
         }
