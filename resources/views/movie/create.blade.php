@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-12">
             <br/>
-            <h3 style="alignment: center">Add Data</h3>
+            <h3 style="alignment: center;padding-top: 20px">Add Data</h3>
             <br/>
             @if(count($errors)>0)
                 <div class="alert alert-danger">
@@ -26,9 +26,9 @@
                 </div>
             @endif
 
-            <form method="post" action="{{url('movie')}}">
+            <form method="post" action="{{url('movie')}}" style="font-size: large">
                 {{csrf_field()}}
-                <div class="form-group">
+                <div class="form-group" >
                     <input type="text" name="id" class="form-control" placeholder="Enter The Movie ID"/>
                 </div>
                 <div class="form-group">

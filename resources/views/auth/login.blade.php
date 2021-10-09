@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="FontC">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
-
-                <div class="card-body">
+                <br/>
+                <div class="card-header" style="font-size: larger;color: white">{{ __('Login') }}</div>
+                <br/>
+                <div class="form-group-row">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -23,6 +24,7 @@
                                     </span>
                                 @enderror
                             </div>
+                            <br/>
                         </div>
 
                         <div class="form-group row">
@@ -37,6 +39,7 @@
                                     </span>
                                 @enderror
                             </div>
+                            <br/>
                         </div>
 
                         <div class="form-group row">
@@ -49,20 +52,24 @@
                                     </label>
                                 </div>
                             </div>
+                            <br/>
                         </div>
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-primary" style="font-size: large" >
                                     {{ __('Login') }}
                                 </button>
+                                <br/>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link" style="color: #f8fafc" href="{{ route('password.request') }}">
+                                        <br/>
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
                             </div>
+                            <br/>
                         </div>
                     </form>
                 </div>
