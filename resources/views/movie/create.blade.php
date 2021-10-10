@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-12">
             <br/>
-            <h3 style="alignment: center;padding-top: 20px">Add Data</h3>
+                <h3 style="alignment: center;padding-top: 20px">Add New Movie</h3>
             <br/>
             @if(count($errors)>0)
                 <div class="alert alert-danger">
